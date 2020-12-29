@@ -9,18 +9,29 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isRoom: 0, // 0选择，1创建或进入， 2聊天室
+      com: 0, // 0选择，1创建或进入， 2聊天室
+      loginState: 'c', // c:创建聊天室, i:进入聊天室
     }
   }
 
+  /**
+   * 变更状态
+   * @param {*} ch 0选择，1创建或进入， 2聊天室
+   * @param {*} ls c:创建聊天室, i:进入聊天室
+    }
+   */
+  changeCom = (ch, ls) => {
+    this.setState({com: ch, loginState: ls});
+  }
+
   render() {
-    const {isRoom} = this.state;
+    const {com, loginState} = this.state;
 
     let element;
-    if (isRoom === 0) {
-      element = <Chose />;
-    } else if (isRoom === 1) {
-      element = <Login />;
+    if (com === 0) {
+      element = <Chose changeCom={this.changeCom} />;
+    } else if (com === 1) {
+      element = <Login loginState={loginState}/>;
     } else {
       element = <Room />;
     }
@@ -29,7 +40,7 @@ class App extends React.Component {
       <div className={'my-app'}>
         {element}
       </div>
-    );
+    )
   }
 }
 

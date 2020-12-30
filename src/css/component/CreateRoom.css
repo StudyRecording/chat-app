@@ -1,0 +1,8 @@
+@import '~antd/dist/antd.css';
+
+.create-form {
+    width: 100%;
+    height: 95%;
+    margin-top: 1vh;
+    text-align: center;
+}

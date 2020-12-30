@@ -41,7 +41,7 @@ class Login extends React.Component {
 
         return (
             <div className={'my-login'}>
-                <Card className={'login-card'} hoverable={true} >
+                <Card className={'login-card'} hoverable={true} bodyStyle={{margin: '5px', height: '100%'}} >
                     {element}
                 </Card>
             </div>

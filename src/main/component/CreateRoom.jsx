@@ -39,7 +39,7 @@ class CreateRoom extends React.Component {
             <Row style={{textAlign: 'center'}}>
                 <Form
                     {...layout}
-                    size={'large'}
+                    size={'middle'}
                     className={'create-form'}
                     name="basic"
                     onFinish={this.onFinish}
@@ -58,7 +58,15 @@ class CreateRoom extends React.Component {
                         name="roomNum"
                         rules={[{ required: true, message: '请输入房间号!' }]}
                     >
-                        <Input.Password />
+                        <Input />
+                    </Form.Item>
+
+                    <Form.Item
+                        label="用户昵称"
+                        name="username"
+                        rules={[{ required: true, message: '请输入用户昵称!' }]}
+                    >
+                        <Input />
                     </Form.Item>
 
                     <Form.Item

@@ -9,7 +9,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      com: 0, // 0选择，1创建或进入， 2聊天室
+      com: 2, // 0选择，1创建或进入， 2聊天室
       loginState: 'c', // c:创建聊天室, i:进入聊天室
     }
   }

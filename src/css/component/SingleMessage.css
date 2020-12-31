@@ -1,0 +1,12 @@
+@import '~antd/dist/antd.css';
+
+
+.message-right {
+    width: 100%;
+    text-align:right;
+}
+
+.message-left {
+    width: 100%;
+    text-align:left;
+}
